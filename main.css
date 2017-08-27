@@ -1,0 +1,75 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding: 0;
+}
+
+#app {
+  width: 80%;
+  margin: 0 auto;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+main, section {
+  border: 1px solid #000;
+}
+
+main {
+  flex-basis: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 100px;
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.first-class, .button1 {
+  background-image: -webkit-linear-gradient(left, #ec7a11, #16e98a, #d4f922); /* For Chrome and Safari */
+  background-image:    -moz-linear-gradient(left, #ec7a11, #16e98a, #d4f922); /* For old Fx (3.6 to 15) */
+  background-image:     -ms-linear-gradient(left, #ec7a11, #16e98a, #d4f922); /* For pre-releases of IE 10*/
+  background-image:      -o-linear-gradient(left, #ec7a11, #16e98a, #d4f922); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(left, #ec7a11, #16e98a, #d4f922); /* Standard syntax; must be last */
+}
+
+.second-class, .button2 {
+background-image: -webkit-linear-gradient(top,#E605C1 0%, #1612e2 50%, #3B113B 100%);
+background-image: -moz-linear-gradient(top,#E605C1 0%, #1612e2 50%, #3B113B 100%);
+background-image: -ms-linear-gradient(top,#E605C1 0%, #1612e2 50%, #3B113B 100%);
+background-image: -o-linear-gradient(top,#E605C1 0%, #1612e2 50%, #3B113B 100%);
+background-image: linear-gradient(top,#E605C1 0%, #1612e2 50%, #3B113B 100%);
+}
+
+.third-class, .button3 {
+  background-image: -webkit-linear-gradient(left, #921bdb 0%, #1ae92e 50%, #f1293d 100%);
+  background-image: -moz-linear-gradient(left, #921bdb 0%, #1ae92e 50%, #f1293d 100%);
+  background-image: -ms-linear-gradient(left, #921bdb 0%, #1ae92e 50%, #f1293d 100%);
+  background-image: -o-linear-gradient(left, #921bdb 0%, #1ae92e 50%, #f1293d 100%);
+  background-image: linear-gradient(left, #921bdb 0%, #1ae92e 50%, #f1293d 100%);
+}
+
+.button1, .button2, .button3 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgba(0, 6, 43, 0.82);
+}
+
+.first-class, .second-class, .third-class {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

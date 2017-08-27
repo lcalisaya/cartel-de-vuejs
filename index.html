@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Hola mundo con linda letra</title>
+</head>
+<body>
+  <div id="app">
+    <main>
+      <h1 :class="class_defined">{{ words }}</h1>
+    </main>
+    <section>
+      <input type="text" placeholder="Ingresar texto" v-model="words">
+      <div class="button1" @click="changeClass('first-class')"></div>
+      <div class="button2" @click="changeClass('second-class')"></div>
+      <div class="button3" @click="changeClass('third-class')"></div>
+      <div class="lala"></div>
+    </section>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script>
+//agregar validación a la entrada de datos
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      words: 'Ingresar texto!',
+      class_defined: 'first-class'
+    },
+    methods: {
+      changeClass: function(theclass){
+        this.class_defined = theclass;
+      }
+    }
+  });
+</script>
+</body>
+</html>
