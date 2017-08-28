@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="tree.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <title>Hola mundo con linda letra</title>
@@ -16,7 +17,8 @@
     <section>
       <div class="texto">
         <span>Ingrese texto aquí:</span>
-        <input id="cajatexto" type="text" placeholder="Ingresar texto" v-model="words">  
+        <input type="text" maxlength="23" placeholder="Ej: Hola mundo!" v-model="words">
+        <span v-if="words.length >= 23" class="alert">Máximo 23 caracteres</span>
       </div>
 
       <div class="button1" @click="changeClass('first-class')"></div>
@@ -30,11 +32,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
 <script>
 //agregar validación a la entrada de datos
-//agregar animaciones de animate.css
+
   var vm = new Vue({
     el: '#app',
     data: {
-      words: 'Ingresar texto!',
+      words: '',
       class_defined: 'first-class'
     },
     methods: {
